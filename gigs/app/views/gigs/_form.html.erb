@@ -1,0 +1,37 @@
+<%= form_with(model: gig) do |form| %>
+  <% if gig.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gig.errors.count, "error") %> prohibited this gig from being saved:</h2>
+
+      <ul>
+        <% gig.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <% form.label :gig_name %>
+    <%= form.text_field :gig_name, class:'form-control', placeholder:"Gig Name" %>
+  </div>
+
+  <div class="field form-group">
+    <% form.label :gig_date %>
+    <%= form.date_select :gig_date, class:'form-control', placeholder:"Gig Date" %>
+  </div>
+
+  <div class="field form-group">
+    <% form.label :gig_cache %>
+    <%= form.text_field :gig_cache, class:'form-control',placeholder:"Gig Amount" %>
+  </div>
+
+  <div class="field form-group">
+    <% form.label :gig_type %>
+    <%= form.text_field :gig_type, class:'form-control',placeholder:"Gig Type" %>
+  </div>
+
+  <div class="actions mb-5">
+    <%= form.submit class:'btn btn-secondary' %>
+  </div>
+<% end %>

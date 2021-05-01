@@ -1,0 +1,23 @@
+
+<p>
+  <strong>Gig name:</strong>
+  <%= @gig.gig_name %>
+</p>
+
+<p>
+  <strong>Gig date:</strong>
+  <%= @gig.gig_date %>
+</p>
+
+<p>
+  <strong>Gig cache:</strong>
+  <%= @gig.gig_cache %>
+</p>
+
+<p>
+  <strong>Gig type:</strong>
+  <%= @gig.gig_type %>
+</p>
+
+<%= link_to 'Edit', edit_gig_path(@gig), class:"btn btn-secondary" %>  
+<%= link_to 'Back', gigs_path, class:"btn btn-secondary" %>
