@@ -3,6 +3,9 @@ class HomeController < ApplicationController
   end
 
   def about
+     
+    @about_me = "Web de prueba"
+
   end
   
 end
