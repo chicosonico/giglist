@@ -2,5 +2,6 @@
 
 <%= render 'form', gig: @gig %>
 
-<%= link_to 'Show', @gig %> |
+<%= link_to 'Show', @gig %> 
+<%= link_to 'Delete', @gig, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
 <%= link_to 'Back', gigs_path %>

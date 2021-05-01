@@ -19,5 +19,6 @@
   <%= @gig.gig_type %>
 </p>
 
-<%= link_to 'Edit', edit_gig_path(@gig), class:"btn btn-secondary" %>  
+<%= link_to 'Edit', edit_gig_path(@gig), class:"btn btn-secondary" %> 
+<%= link_to 'Delete', @gig, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
 <%= link_to 'Back', gigs_path, class:"btn btn-secondary" %>
