@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_01_141027) do
+ActiveRecord::Schema.define(version: 2021_05_01_151238) do
 
   create_table "gigs", force: :cascade do |t|
     t.string "gig_name"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 2021_05_01_141027) do
     t.string "gig_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_gigs_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
