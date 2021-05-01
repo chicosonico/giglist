@@ -64,6 +64,6 @@ class GigsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def gig_params
-      params.require(:gig).permit(:gig_name, :gig_date, :gig_cache, :gig_type)
+      params.require(:gig).permit(:gig_name, :gig_date, :gig_cache, :gig_type, :user_id )
     end
 end
