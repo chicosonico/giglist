@@ -1,5 +1,7 @@
 class GigsController < ApplicationController
   before_action :set_gig, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   # GET /gigs or /gigs.json
   def index
@@ -12,7 +14,9 @@ class GigsController < ApplicationController
 
   # GET /gigs/new
   def new
-    @gig = Gig.new
+    # @gig = Gig.new
+    @gig = current_user.gigs.build
+
   end
 
   # GET /gigs/1/edit
@@ -21,7 +25,8 @@ class GigsController < ApplicationController
 
   # POST /gigs or /gigs.json
   def create
-    @gig = Gig.new(gig_params)
+    # @gig = Gig.new(gig_params)
+    @gig = current_user.gigs.build(gig_params)
 
     respond_to do |format|
       if @gig.save
@@ -54,6 +59,11 @@ class GigsController < ApplicationController
       format.html { redirect_to gigs_url, notice: "Gig was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def correct_user
+    @gig = current_user.gigs.find_by(id: params[:id])
+    redirect_to gigs_path, notice: "Not Authorized to Edit This Gig" if @gig.nil?
   end
 
   private
