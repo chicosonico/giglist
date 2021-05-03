@@ -7,5 +7,6 @@ class HomeController < ApplicationController
     @about_me = "Web de prueba"
 
   end
+
   
 end
