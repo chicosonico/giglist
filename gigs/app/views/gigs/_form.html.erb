@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <div class="form-section">
+
   <div class="field form-group">
     <% form.label :gig_name %>
     <%= form.text_field :gig_name, class:'form-control', placeholder:"Gig Name" %>
@@ -38,5 +40,7 @@
 
   <div class="actions mb-5">
     <%= form.submit class:'btn btn-secondary' %>
+  </div>
+
   </div>
 <% end %>
