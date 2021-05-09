@@ -1,8 +1,10 @@
 
 <% if user_signed_in? %>
 
+<div class="container text-center">
+<h1 class='my-4'>Gigs List</h1>
 
-<h1>Gigs List</h1>
+<%= link_to 'New Gig', new_gig_path, class:"btn btn-secondary mb-3" %>
 
 <table class="table">
   <thead>
@@ -38,20 +40,28 @@
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Gig', new_gig_path, class:"btn btn-secondary" %>
+
+
+
+
+</div>
 
 <% else %>
 
 <%# <%= render 'home/index' %> 
 
-<div class="title-section ">
-<h1>Listado de Bolos</h1>
- <h2>¿Autónomo o asalariado?</h2>
-<p>Lleva el control de tus bolos y encontrarás la respuesta</p>
+    <div class="row title-section text-center mt-5">
+      <div class="col-lg-12">
+        
+        <h1>¿Autónomo o asalariado?</h1>
+        <h2>Lleva el control de tus bolos y encontrarás la respuesta</h2>
 
-</div>
+      </div>
+
+     
+    </div>
+
 
 
 

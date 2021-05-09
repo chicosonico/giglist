@@ -28,10 +28,14 @@
     <%= form.text_field :gig_cache, class:'form-control',placeholder:"Gig Amount" %>
   </div>
 
-  <div class="field form-group">
-    <% form.label :gig_type %>
-    <%= form.text_field :gig_type, class:'form-control',placeholder:"Gig Type" %>
-  </div>
+  
+
+  <%= form.select :gig_type, options_for_select([
+  ["Gig Type, Select One", ""], 
+  "Factura", 
+  "B", 
+  "Alta"]), 
+  {}, { class: "form form-group form-control" } %>
 
   <div class="field form-group">
     <% form.label :user_id %>
@@ -39,7 +43,7 @@
   </div>
 
   <div class="actions mb-5">
-    <%= form.submit class:'btn btn-secondary' %>
+    <%= form.submit class:'btn btn-secondary btn-custom' %>
   </div>
 
   </div>

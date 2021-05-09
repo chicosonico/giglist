@@ -1,7 +1,17 @@
-<h1>Editing Gig</h1>
+
+
+<div class="container">
+
+
+<h1 class='my-4 text-center'>Editing Gig</h1>
 
 <%= render 'form', gig: @gig %>
 
+
+<div class="text-center mt-5">
 <%= link_to 'Show', @gig %> 
 <%= link_to 'Delete', @gig, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
 <%= link_to 'Back', gigs_path %>
+</div>
+
+</div>

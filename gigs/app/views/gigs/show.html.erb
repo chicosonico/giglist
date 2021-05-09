@@ -1,10 +1,15 @@
+<div class="container text-center">
 
-<p>
-  <strong>Gig name:</strong>
+
+<div class="form-section mt-5 ">
+  <h1 class="display-4">
   <%= @gig.gig_name %>
-</p>
+  </h1>
+  <hr class="my-4">
 
-<p>
+  <p class="lead">
+
+  <p>
   <strong>Gig date:</strong>
   <%= @gig.gig_date %>
 </p>
@@ -18,7 +23,17 @@
   <strong>Gig type:</strong>
   <%= @gig.gig_type %>
 </p>
+  
+  </p>
 
-<%= link_to 'Edit', edit_gig_path(@gig), class:"btn btn-secondary" %> 
+  <%= link_to 'Edit', edit_gig_path(@gig), class:"btn btn-secondary" %> 
 <%= link_to 'Delete', @gig, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
 <%= link_to 'Back', gigs_path, class:"btn btn-secondary" %>
+
+ 
+</div>
+
+
+
+
+</div>

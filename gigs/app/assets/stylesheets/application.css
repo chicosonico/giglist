@@ -14,21 +14,129 @@
  *= require_self
  */
 
+ /* 
+40514E
+11999E
+30E3CA
+E4F9F5
+
+ 
+ 
+ */
+
+ body{
+     background-color: #F8F9FA;
+
+ }
+
  .container-fluid{
      padding: 0%;
  }
 
+ 
+ 
+
  .title-section{
-     background-color: aquamarine;
+     background-color: #F8F9FA;
      margin: 0%;
      width: 100%;
+    
+     
+
+     
  }
 
  .form-section{
     margin: auto;
-    width: 50%;
-    border: 3px solid rgb(100, 6, 143);
+    width: 60%;
+    border: 3px solid #023e8a;
     padding: 20px;
     border-radius: 10px;
+    background-color: #F8F9FA;
 
  }
+
+.form-user{
+
+    margin: auto;
+    width: 80%;
+    border: 3px solid #023e8a;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #F8F9FA;
+
+
+}
+ 
+ .btn-custom{
+     background-color: #023e8a;
+    
+     border: 20px;
+       
+ }
+
+ .btn-custom:hover{
+    background-color:#6197df;
+    
+ }
+
+ /* Texts */
+
+ h1{
+     font-family: 'Roboto', sans-serif;
+     font-weight: 900;
+     font-size: 5rem;
+     color: #023e8a;
+ }
+
+ h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #023e8a;
+}
+
+ .nav-title{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+     font-size: 2rem;
+     color: #023e8a;
+ }
+
+ .balance-card-numbers{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 5rem;
+    color: #023e8a;
+
+ }
+
+/* 
+ .navbar-light a{
+    color: red;
+} */
+
+ /* change the background color */
+/* .navbar-custom {
+    background-color: #ff5500;
+} */
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: #023e8a;
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: #023e8a;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: red;
+}
+
+.nav-logo{
+   width: auto; 
+   height: 50px;
+}

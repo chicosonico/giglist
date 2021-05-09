@@ -1,32 +1,38 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<%= link_to  "Gigs List", root_path, class:"navbar-brand"
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom " >
+<%= link_to  "Gigs List", root_path, class:"navbar-brand nav-title"
  %>
+
+ <%= image_tag("stage.png", class:"nav-logo"    , :alt => "rss feed") %>
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      
-      <li class="nav-item">
-      <%= link_to  "About Us", home_about_path, class:"nav-link" %>
-      </li>
+    <ul class="navbar-nav ml-auto">
       
       
-
+      
       <% if user_signed_in? %>
+
+      <li class="nav-item">
+      <%= link_to  "Gig List", root_path, class:"nav-link" %>
+      </li>
 
       <li class="nav-item">
       <%= link_to  "New Gig", new_gig_path, class:"nav-link" %>
       </li>
 
-      <li class="nav-item">
-      <%= link_to  "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link" %>
+       <li class="nav-item">
+      <%= link_to  "Balance", home_balance_path, class:"nav-link" %>
       </li>
 
       <li class="nav-item">
       <%= link_to  "Edit Profile", edit_user_registration_path, class:"nav-link" %>
+      </li>
+
+      <li class="nav-item">
+      <%= link_to  "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link" %>
       </li>
 
       
@@ -45,13 +51,17 @@
 
       <% end %>
 
+      <li class="nav-item">
+      <%= link_to  "About Us", home_about_path, class:"nav-link" %>
+      </li>
+
       
       
         
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <%# <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    </form> %>
   </div>
 </nav>
