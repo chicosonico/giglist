@@ -1,19 +1,19 @@
 
-<% if user_signed_in? %>
+
 
 <div class="container text-center">
 <h1 class='my-4'>Gigs List</h1>
 
 <%= link_to 'New Gig', new_gig_path, class:"btn btn-secondary mb-3" %>
 
-<table class="table">
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Gig name</th>   
       <th>Gig date</th>
       <th>Gig cache</th>
       <th>Gig type</th>
-      <th>User ID</th>
+      <%# <th>User ID</th> %>
       <th colspan="1"></th>
     </tr>
   </thead>
@@ -31,9 +31,9 @@
         <td><%= gig.gig_date %></td>
         <td><%= gig.gig_cache %></td>
         <td><%= gig.gig_type %></td>
-        <td><%= gig.user_id %></td>
+        <%# <td><%= gig.user_id %>
   
-        <td><%= link_to 'Delete', gig, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger btn-sm" %></td>
+       <td><%= link_to 'Delete', gig, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger btn-sm" %>
       </tr>
       <% end %>
     <% end %>
@@ -47,22 +47,3 @@
 
 </div>
 
-<% else %>
-
-<%# <%= render 'home/index' %> 
-
-    <div class="row title-section text-center mt-5">
-      <div class="col-lg-12">
-        
-        <h1>¿Autónomo o asalariado?</h1>
-        <h2>Lleva el control de tus bolos y encontrarás la respuesta</h2>
-
-      </div>
-
-     
-    </div>
-
-
-
-
-<% end %>

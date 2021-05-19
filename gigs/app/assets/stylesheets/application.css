@@ -39,11 +39,12 @@ E4F9F5
  .title-section{
      background-color: #F8F9FA;
      margin: 0%;
-     width: 100%;
-    
+     width: 100%; 
      
+ }
 
-     
+ .home-section-one{
+    background-color: #023e8a;
  }
 
  .form-section{
@@ -85,7 +86,7 @@ E4F9F5
  h1{
      font-family: 'Roboto', sans-serif;
      font-weight: 900;
-     font-size: 5rem;
+     font-size: 4rem;
      color: #023e8a;
  }
 
@@ -95,6 +96,22 @@ E4F9F5
     font-size: 2rem;
     color: #023e8a;
 }
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #023e8a;
+}
+h6{
+    color: #023e8a;
+}
+
+p{
+    color: #023e8a;
+}
+
+
 
  .nav-title{
     font-family: 'Roboto', sans-serif;
@@ -106,9 +123,13 @@ E4F9F5
  .balance-card-numbers{
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
-    font-size: 5rem;
+    font-size: 4rem;
     color: #023e8a;
 
+ }
+
+ .text-white{
+     color: #F8F9FA;
  }
 
 /* 
@@ -140,3 +161,11 @@ E4F9F5
    width: auto; 
    height: 50px;
 }
+
+.net-image-center{
+    
+    width: 400px;
+    height: auto;
+
+}
+

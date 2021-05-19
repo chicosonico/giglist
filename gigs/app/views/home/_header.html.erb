@@ -1,5 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom " >
-<%= link_to  "Gigs List", root_path, class:"navbar-brand nav-title"
+
+<div class="container">
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom mx-5 " >
+<%= link_to  "Gigs", root_path, class:"navbar-brand nav-title"
  %>
 
  <%= image_tag("stage.png", class:"nav-logo"    , :alt => "rss feed") %>
@@ -11,21 +15,25 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       
+  
       
       
+
       <% if user_signed_in? %>
 
+       <li class="nav-item">
+      <%= link_to  "Balance", root_path, class:"nav-link" %>
+      </li>
+      
       <li class="nav-item">
-      <%= link_to  "Gig List", root_path, class:"nav-link" %>
+      <%= link_to  "Gig List", gigs_path, class:"nav-link" %>
       </li>
 
       <li class="nav-item">
       <%= link_to  "New Gig", new_gig_path, class:"nav-link" %>
       </li>
 
-       <li class="nav-item">
-      <%= link_to  "Balance", home_balance_path, class:"nav-link" %>
-      </li>
+
 
       <li class="nav-item">
       <%= link_to  "Edit Profile", edit_user_registration_path, class:"nav-link" %>
@@ -34,7 +42,6 @@
       <li class="nav-item">
       <%= link_to  "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link" %>
       </li>
-
       
 
       <% else %>
@@ -51,7 +58,8 @@
 
       <% end %>
 
-      <li class="nav-item">
+
+       <li class="nav-item">
       <%= link_to  "About Us", home_about_path, class:"nav-link" %>
       </li>
 
@@ -65,3 +73,6 @@
     </form> %>
   </div>
 </nav>
+
+
+</div>
