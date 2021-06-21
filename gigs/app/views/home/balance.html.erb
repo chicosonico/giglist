@@ -46,7 +46,7 @@
                                     <h3> Total Ingresado: <%= @gigs_total_amount_factura %> €</h3>
 
 
-                                <h5 class="card-title">Autónomos o falsos autónomos</h5>
+                                <h5 class="card-title">Autónomos</h5>
                                 <%# <p class="card-text">¿Estas facturas las has emitido tú o fueron indirectas?</p> %>
                                 <a href="#" class="btn btn-primary">Más info</a>
                               </div>
@@ -89,12 +89,17 @@
                                 <div class="card-body">
 
                                 <div class="balance-card-numbers text-center">
-                                    <%= @gigs_altass %>
+                                    <%= @gigs_altass + @gigs_factura_indirecta %>
                                     </div>
 
-                                     <h3> Total Ingresado: <%= @gigs_total_amount_altass%> €</h3>
+                                     <h3> Total Ingresado: <%= @gigs_total_amount_altas_all%> €</h3>
 
                                     <h5 class="card-title">Bolos cotizados en la Seguridad Social</h5>
+                                    <p> De los cuales <%= @gigs_altass%> fueron dados de alta correctamente 
+                                    por un importe de <%= @gigs_total_amount_altass%> €</p>
+                                    <p>y <%= @gigs_factura_indirecta%> fueron facturados indirectamente 
+                                    por un importe de <%= @gigs_total_amount_factura_indirecta%> €</p>
+                                    
                                     <%# <p class="card-text">Estos bolos tienen un valor bruto en el que se contembla tu seguro, paro, jubilación...</p> %>
                                     <a href="#" class="btn btn-primary">Más info</a>
                                 </div>
@@ -108,12 +113,13 @@
 
                 </div>
 
-                <% if @gigs_factura < @gigs_altass %>
+                <% if @gigs_factura <= @gigs_altass + @gigs_factura_indirecta %>
                         <div class="jumbotron">
                                 <h1 class="display-4">Eres asalariado</h1>
                                 <p class="lead">No le des más vueltas. 
                                 Si te han dicho dónde y cuando vas a tocar y cuanto vas a cobrar eres trabajador por cuenta ajena. 
-                                El trabajador por cuenta ajena tiene que estar sujeto a los horarios, descansos y lugar de trabajo que establezca el empresario, mientras que el trabajador por cuenta propia establecerá sus horarios y sus descansos a la vez que escogerá el lugar donde él quiera trabajar, según le sea más beneficioso. </p>
+                                El trabajador por cuenta ajena tiene que estar sujeto a los horarios, descansos y lugar de trabajo que establezca el empresario, mientras que el trabajador por cuenta propia establecerá sus horarios y sus descansos a la vez que escogerá el lugar donde él quiera trabajar, según le sea más beneficioso. 
+                                Las facturas indirectas que has pedido a la cooperativa o asociación también las contactos aquí ya que te han dado de alta en la seguridad social, o sea que una empresa intermediaria te ha contratado, generando que seas un falso autónomo.</p>
 
                                 <hr class="my-4">
                                 <p>Si necesitas más información puedes consultar las normativas aquí. 
